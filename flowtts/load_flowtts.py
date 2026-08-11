@@ -205,7 +205,7 @@ class FlowTTS:
         Returns:
             Transcribed text
         """
-        return transcribe(ref_audio, language)
+        return transcribe(ref_audio, language, device=self.device)
 
     def export_wav(self, wav: NDArray[np.float32], file_wave: str, 
                   remove_silence: bool = False) -> None:
